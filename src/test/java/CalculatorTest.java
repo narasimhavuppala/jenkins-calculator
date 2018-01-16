@@ -26,6 +26,7 @@ public class CalculatorTest {
 		Calculator obj = new Calculator();
 		obj.setA(5);
 		obj.setB(0);
+		obj.division();
 	}
 
 	@Test
