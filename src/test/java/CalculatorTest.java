@@ -12,5 +12,13 @@ public class CalculatorTest {
 		obj.setB(3);
 		Assert.assertEquals(8, obj.add());
 	}
+	
+	@Test
+	public void testSubtract() {
+		Calculator obj=new Calculator();
+		obj.setA(5);
+		obj.setB(3);
+		Assert.assertEquals(4, obj.subtract());
+	}
 
 }

@@ -21,6 +21,12 @@ public class Calculator {
 		return (this.a + this.b);
 	}
 	
+
+	int subtract() {
+		
+		return (this.a - this.b);
+	}
+	
 	
 
 }
