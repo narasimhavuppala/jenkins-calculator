@@ -16,5 +16,15 @@ pipeline {
         input 'Approve'
       }
     }
+    stage('Deploy to SIT') {
+      steps {
+        input 'Yes'
+      }
+    }
+    stage('Approve') {
+      steps {
+        input 'Deploiy to UAT'
+      }
+    }
   }
 }
