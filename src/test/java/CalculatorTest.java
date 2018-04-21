@@ -34,7 +34,7 @@ public class CalculatorTest {
 		Calculator obj = new Calculator();
 		obj.setA(5);
 		obj.setB(1);
-		Assert.assertEquals(4, obj.division());
+		Assert.assertEquals(5, obj.division());
 	}
 
 }
