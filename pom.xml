@@ -6,7 +6,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -66,7 +65,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
-				<version>3.2</version>
+				<version>3.9.0</version>
 				<configuration>
 					<formats>
 						<format>xml</format>
@@ -78,28 +77,32 @@
 						<goals>
 							<goal>pmd</goal>
 						</goals>
+					</execution>
+				</executions>
 
+			</plugin>
+
+			<plugin>
+
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<formats>
+						<format>xml</format>
+					</formats>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>checkstyle</goal>
+						</goals>
 					</execution>
 				</executions>
 			</plugin>
 		</plugins>
 	</build>
 
-	<reporting>
 
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-checkstyle-plugin</artifactId>
-				<version>3.0.0</version>
-				<reportSets>
-					<reportSet>
-						<reports>
-							<report>checkstyle</report>
-						</reports>
-					</reportSet>
-				</reportSets>
-			</plugin>
-		</plugins>
-	</reporting>
 </project>
