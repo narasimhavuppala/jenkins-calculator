@@ -1,16 +1,15 @@
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
-import junit.framework.Assert;
+import org.junit.Test;
 
 public class CalculatorTest {
 
-	@SuppressWarnings("deprecation")
 	@Test
 	public void testAdd() {
 		Calculator obj = new Calculator();
 		obj.setA(5);
 		obj.setB(3);
-		Assert.assertEquals(8, obj.add());
+		assertEquals(8, obj.add());
 	}
 
 	@Test
@@ -18,7 +17,7 @@ public class CalculatorTest {
 		Calculator obj = new Calculator();
 		obj.setA(5);
 		obj.setB(3);
-		Assert.assertEquals(2, obj.subtract());
+		assertEquals(2, obj.subtract());
 	}
 
 	@Test(expected = Exception.class)
@@ -34,7 +33,7 @@ public class CalculatorTest {
 		Calculator obj = new Calculator();
 		obj.setA(5);
 		obj.setB(1);
-		Assert.assertEquals(5, obj.division());
+		assertEquals(5, obj.division());
 	}
 
 }
